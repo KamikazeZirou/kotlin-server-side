@@ -2,14 +2,12 @@ package com.example.kotlinserverside.handler
 
 import com.example.kotlinserverside.entity.Item
 import com.example.kotlinserverside.repository.ItemRepository
-import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.body
 import org.springframework.web.reactive.function.server.bodyToMono
 import reactor.core.publisher.Mono
 
-@Component
 class ItemHandler(private val itemRepository: ItemRepository) {
     fun getList(request: ServerRequest): Mono<ServerResponse> = ServerResponse
             .ok()

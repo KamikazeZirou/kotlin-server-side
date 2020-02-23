@@ -2,11 +2,9 @@ package com.example.kotlinserverside.router
 
 import com.example.kotlinserverside.handler.ItemHandler
 import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType
 import org.springframework.web.reactive.function.server.router
 
-@Configuration
 class ApiRouter(private val itemHandler: ItemHandler) {
     @Bean
     fun itemRouter() = router {
