@@ -13,11 +13,11 @@ class ItemController(private val itemRepository: ItemRepository) {
     @GetMapping("/items/{id}")
     suspend fun getById(@PathVariable id: Int)  = itemRepository.findById(id)
 
-    @PostMapping("items")
+    @PostMapping("/items")
     @ResponseStatus(HttpStatus.CREATED)
     suspend fun create(@RequestBody item: Item) = itemRepository.save(item)
 
-    @DeleteMapping("items/{id}")
+    @DeleteMapping("/items/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     suspend fun deleteById(@PathVariable id: Int) = itemRepository.deleteById(id)
 }
