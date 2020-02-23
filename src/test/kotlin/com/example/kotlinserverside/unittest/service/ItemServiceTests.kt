@@ -1,4 +1,4 @@
-package com.example.kotlinserverside.service
+package com.example.kotlinserverside.unittest.service
 
 import com.example.kotlinserverside.entity.Item
 import com.example.kotlinserverside.repository.ItemRepository
