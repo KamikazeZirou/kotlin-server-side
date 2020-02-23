@@ -2,6 +2,7 @@ package com.example.kotlinserverside.unittest.service
 
 import com.example.kotlinserverside.entity.Item
 import com.example.kotlinserverside.repository.ItemRepository
+import com.example.kotlinserverside.service.ItemService
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
 import io.mockk.verify

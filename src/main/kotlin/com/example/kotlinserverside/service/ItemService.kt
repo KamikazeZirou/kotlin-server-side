@@ -1,4 +1,4 @@
-package com.example.kotlinserverside.unittest.service
+package com.example.kotlinserverside.service
 
 import com.example.kotlinserverside.repository.ItemRepository
 import org.springframework.stereotype.Service

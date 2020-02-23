@@ -1,7 +1,9 @@
 package com.example.kotlinserverside.unittest.controller
 
 import com.example.kotlinserverside.entity.Item
+import com.example.kotlinserverside.handler.ItemHandler
 import com.example.kotlinserverside.repository.ItemRepository
+import com.example.kotlinserverside.router.ApiRouter
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
 import io.mockk.verify
@@ -10,8 +12,10 @@ import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
+import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.web.reactive.server.WebTestClient
 
+@ContextConfiguration(classes = [ApiRouter::class, ItemHandler::class])
 @WebFluxTest
 internal class ItemControllerTests(@Autowired private val webTestClient: WebTestClient) {
     @MockkBean lateinit var mockItemRepository: ItemRepository
