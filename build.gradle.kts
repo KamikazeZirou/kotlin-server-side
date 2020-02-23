@@ -29,6 +29,7 @@ dependencies {
 	}
 	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("com.ninja-squad:springmockk:1.1.3")
+	testImplementation("org.assertj:assertj-core:3.11.1")
 }
 
 tasks.withType<Test> {
